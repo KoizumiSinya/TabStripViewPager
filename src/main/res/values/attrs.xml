@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- PagerSlidingTabStrip-->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <!-- 指示器颜色 -->
+        <attr name="tabIndicatorColor" format="color"/>
+        <!-- 指示器的高度-->
+        <attr name="tabIndicatorHeight" format="dimension"/>
+        <!--底部分隔线颜色-->
+        <attr name="tabUnderlineColor" format="color"/>
+        <!-- tabItem之间分隔线的颜色 -->
+        <attr name="tabDividerColor" format="color"/>
+        <!-- 在视图的底部占位线的高度-->
+        <attr name="tabUnderlineHeight" format="dimension"/>
+        <!-- 分隔线距离上下的padding-->
+        <attr name="tabDividerPadding" format="dimension"/>
+        <!-- 如果设置为true，每个标签都给予同样的weight，默认为false-->
+        <attr name="tabShouldExpand" format="boolean"/>
+        <!-- 如果为真，所有选项卡标题都是大写，默认为true-->
+        <attr name="tabTextAllCaps" format="boolean"/>
+        <!-- 标签的文字大小-->
+        <attr name="tabTextSize" format="dimension"/>
+        <!--标签的文字默认颜色 -->
+        <attr name="tabTextColor" format="color"/>
+        <!-- 被选中标签的文字颜色-->
+        <attr name="tabTextSelectedColor" format="color"/>
+        <!-- 指示器被选中时 标签的偏移量-->
+        <attr name="tabIndicatorScrollOffset" format="dimension"/>
+        <!-- Item之间 左右padding-->
+        <attr name="tabItemPaddingLeftRight" format="dimension"/>
+        <!-- Item的背景的背景-->
+        <attr name="tabItemBackground" format="reference"/>
+        <!-- 文字与下方的padding-->
+        <attr name="tabTextPaddingButtom" format="dimension"/>
+
+        <!-- tab样式：1 文本； 2 Icon； 3 Icon在左+ 文本在右； 4 Icon在上 + 文本在下-->
+        <attr name="tabStyle">
+            <enum name="textStyle" value="1"></enum>
+            <enum name="iconStyle" value="2"></enum>
+            <enum name="iconLeftToTextStyle" value="3"></enum>
+            <enum name="iconAboveToTextStyle" value="4"></enum>
+        </attr>
+
+        <!-- tab的文本和Icon的间距-->
+        <attr name="tabIconToTextPadding" format="dimension"/>
+        <!-- tab的图片宽度-->
+        <attr name="tabIconWidth" format="dimension"/>
+        <!-- tab的图片高度-->
+        <attr name="tabIconHeight" format="dimension"/>
+    </declare-styleable>
+    <!-- PagerSlidingTabStrip-->
+
+</resources>

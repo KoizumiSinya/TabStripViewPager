@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.example.administrator.demo_tabstripviewpager.widget.PagerSlidingTabStrip
+        android:id="@+id/tabstrip"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        tools:tabDividerColor="@android:color/transparent"
+        tools:tabIndicatorColor="#FF33B5E5"
+        tools:tabIndicatorHeight="2dp"
+        tools:tabItemPaddingLeftRight="2dp"
+        tools:tabShouldExpand="true"
+        tools:tabTextColor="#000000"
+        tools:tabTextSelectedColor="#FF33B5E5"
+        tools:tabTextSize="16sp"
+        tools:tabUnderlineColor="#DFDFDF"
+        tools:tabUnderlineHeight="0.5dp"
+        tools:tabStyle="iconStyle"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
+

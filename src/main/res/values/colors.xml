@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_tab_pressed">#6633B5E5</color>
+
+    <color name="defalut">#9da0a3</color>
+    <color name="qqzone">#E9AA3B</color>
+    <color name="sina">#D25E52</color>
+    <color name="wechat">#6EB244</color>
+
+</resources>
