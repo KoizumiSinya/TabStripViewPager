@@ -11,6 +11,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -119,6 +120,13 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
      * 文本 大小
      */
     private int tabTextSize = 12;
+
+    /**
+     * 文本字体样式
+     * 默认0 正常
+     * 1 是粗体
+     */
+    private int tabTextStyle = 0;
 
     /**
      * 文本 未选中颜色
@@ -253,6 +261,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         tabIconPadding = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_tabIconToTextPadding, tabIconPadding);
         //文本距离底下分隔线的间距
         tabTextPaddingButtom = a.getDimensionPixelSize(R.styleable.PagerSlidingTabStrip_tabTextPaddingButtom, tabTextPaddingButtom);
+        //文本字体的样式 默认0正常； 1是粗体
+        tabTextStyle= a.getInt(R.styleable.PagerSlidingTabStrip_tabTextStyle, tabTextStyle);
 
         a.recycle();
 
@@ -500,6 +510,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
             tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, tabTextSize);
             tv.setTypeface(tabTypeface, tabTypefaceStyle);
             tv.setTextColor(tabTextColor);
+            if (tabTextStyle == 1) {
+                TextPaint tp = tv.getPaint();
+                tp.setFakeBoldText(true);
+            }
 
             if (tabTips == null) {
                 tabTips = new int[tabCount];
@@ -635,6 +649,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, tabTextSize);
                 tv.setTypeface(tabTypeface, tabTypefaceStyle);
                 tv.setTextColor(tabTextColor);
+                if (tabTextStyle == 1) {
+                    TextPaint tp = tv.getPaint();
+                    tp.setFakeBoldText(true);
+                }
 
                 if (tabTips == null) {
                     tabTips = new int[tabCount];
@@ -715,6 +733,10 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, tabTextSize);
                 tv.setTypeface(tabTypeface, tabTypefaceStyle);
                 tv.setTextColor(tabTextColor);
+                if (tabTextStyle == 1) {
+                    TextPaint tp = tv.getPaint();
+                    tp.setFakeBoldText(true);
+                }
 
                 if (tabTips == null) {
                     tabTips = new int[tabCount];
@@ -1041,6 +1063,15 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         invalidate();
         notifyDataSetChanged();
     }
+
+//    public int getTabTextStyle() {
+//        return tabTextStyle;
+//    }
+//
+//    public void setTabTextStyle(int tabTextStyle) {
+//        this.tabTextStyle = tabTextStyle;
+//        updateTabStyles();
+//    }
 
     // [-] get set Methods
     // [+] Override

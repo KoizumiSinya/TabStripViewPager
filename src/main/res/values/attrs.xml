@@ -43,6 +43,11 @@
             <enum name="iconAboveToTextStyle" value="4"></enum>
         </attr>
 
+        <attr name="tabTextStyle">
+            <enum name="defaultText" value="0"></enum>
+            <enum name="boldText" value="1"></enum>
+        </attr>
+
         <!-- tab的文本和Icon的间距-->
         <attr name="tabIconToTextPadding" format="dimension"/>
         <!-- tab的图片宽度-->
@@ -53,3 +58,4 @@
     <!-- PagerSlidingTabStrip-->
 
 </resources>
+

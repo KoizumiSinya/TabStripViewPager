@@ -19,6 +19,7 @@
         tools:tabUnderlineColor="#DFDFDF"
         tools:tabUnderlineHeight="0.5dp"
         tools:tabStyle="iconStyle"
+        tools:tabTextStyle="boldText"
         />
 
     <android.support.v4.view.ViewPager
